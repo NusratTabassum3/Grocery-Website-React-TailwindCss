@@ -5,7 +5,7 @@ import { IoSearch } from "react-icons/io5";
 
 function Navbar() {
   return (
-    <header>
+    <header className="fixed top-0 right-0 left-0 bg-white">
       <nav className="max-w-[1400px] mx-auto px-10 h-[14vh] flex justify-between items-center">
         {/* Logo  */}
         <a href="" className="text-3xl font-bold">
