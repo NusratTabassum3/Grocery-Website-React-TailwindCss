@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { GoHeartFill } from "react-icons/go";
 import { HiShoppingBag } from "react-icons/hi";
 import { IoSearch } from "react-icons/io5";
@@ -6,14 +6,28 @@ import { TbMenu2, TbMenu3 } from "react-icons/tb";
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = (e) => {
     e.preventDefault();
     setShowMenu(!showMenu);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="bg-white fixed top-0 right-0 left-0">
+    <header
+      className={`bg-white fixed top-0 right-0 left-0 z-50 ${
+        isScrolled ? "drop-shadow-[0_4px_25px_rgba(0,0,0,0.08)]" : ""
+      }`}
+    >
       <nav className="max-w-[1400px] mx-auto px-10 md:h-[14vh] h-[12vh] flex justify-between items-center">
         {/* Logo */}
         <a href="#" className="text-3xl font-bold">
@@ -91,7 +105,7 @@ function Navbar() {
 
         {/* Mobile Menu */}
         <ul
-          className={`flex flex-col gap-y-12 bg-orange-500/15 backdrop-blur-xl rounded-xl p-10 items-center md:hidden absolute top-32 left-1/2 transform -translate-x-1/2 transition-all duration-500 ease-in-out ${
+          className={`flex flex-col gap-y-12 bg-orange-500/15 backdrop-blur-xl shadow-xl rounded-xl p-10 items-center md:hidden absolute top-32 left-1/2 transform -translate-x-1/2 transition-all duration-500 ease-in-out ${
             showMenu
               ? "translate-y-0 opacity-100"
               : "-translate-y-10 opacity-0 pointer-events-none"
