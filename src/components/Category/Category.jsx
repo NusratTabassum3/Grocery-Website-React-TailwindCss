@@ -10,7 +10,7 @@ const Category = () => {
     return (
       // Card
 
-      <div className="flex-1 basis-[300px]">
+      <div className="flex-1 basis-[300px] " key={card.id}>
         {/* Card Image  */}
 
         <div className="w-full min-h-[30vh] relative -mb-10">
