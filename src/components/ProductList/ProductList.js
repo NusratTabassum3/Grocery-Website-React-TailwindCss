@@ -52,7 +52,7 @@ const products = [
     id: 4,
     name: "Cabbage",
     price: 3.0,
-    category:'Vegetables',
+    category:'Vegetable',
     image: Cabbage,
   },
 
@@ -60,7 +60,7 @@ const products = [
     id: 5,
     name: "Eggplant",
     price: 4.0,
-    category:'Vegetables',
+    category:'Vegetable',
     image: Eggplant,
   },
   {
@@ -83,7 +83,7 @@ const products = [
     id: 8,
     name: "Green Capsicum",
     price: 4.0,
-    category:'Vegetables',
+    category:'Vegetable',
     image: Capsicum,
   },
 
@@ -91,7 +91,7 @@ const products = [
     id: 9 ,
     name: "Broccoli",
     price: 2.0,
-    category:'Vegetables',
+    category:'Vegetable',
     image: Broccoli,
   },
 
@@ -122,7 +122,7 @@ const products = [
     id: 13,
     name: "Kale Leaves",
     price: 3.0,
-    category:'Vegetables',
+    category:'Vegetable',
     image: Kale,
   },
 
@@ -216,7 +216,7 @@ const products = [
     id: 25,
     name: "Lettuce Leaf",
     price: 3.0,
-    category:'Vegatables',
+    category:'Vegatable',
     image: Lettuce,
   },
 
