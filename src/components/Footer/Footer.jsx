@@ -4,7 +4,7 @@ import { IoIosArrowForward } from "react-icons/io";
 const Footer = () => {
   return (
     <footer className="bg-zinc-100 py-20">
-      <div className="flex flex-wrap max-w-[1400px] mx-auto px-10">
+      <div className="flex flex-wrap gap-y-12 max-w-[1400px] mx-auto px-10">
         <div className="flex-1 basis-[300px]">
           <a href="#" className="text-3xl font-bold">
             Gr<span className="text-orange-500 uppercase">o</span>cify
@@ -22,11 +22,15 @@ const Footer = () => {
           <li>
             <h5 className="text-zinc-800 text-2xl font-bold ">Company</h5>
           </li>
-          <li>
-            <a className="text-zinc-800  hover:text-orange-500 ">About</a>
+          <li className="mt-6">
+            <a href="#" className="text-zinc-800  hover:text-orange-500 ">
+              About
+            </a>
           </li>
-          <li>
-            <a className="text-zinc-800  hover:text-orange-500 ">FAQ'S</a>
+          <li className="mt-6">
+            <a href="#" className="text-zinc-800  hover:text-orange-500 ">
+              FAQ'S
+            </a>
           </li>
         </ul>
 
@@ -34,16 +38,20 @@ const Footer = () => {
           <li>
             <h5 className="text-zinc-800 text-2xl font-bold ">Support</h5>
           </li>
-          <li>
-            <a className="text-zinc-800  hover:text-orange-500 ">
+          <li className="mt-6">
+            <a href="#" className="text-zinc-800  hover:text-orange-500 ">
               Support Center
             </a>
           </li>
-          <li>
-            <a className="text-zinc-800  hover:text-orange-500 ">Feedback</a>
+          <li className="mt-6">
+            <a href="#" className="text-zinc-800  hover:text-orange-500 ">
+              Feedback
+            </a>
           </li>
-          <li>
-            <a className="text-zinc-800  hover:text-orange-500 ">Contact Us</a>
+          <li className="mt-6">
+            <a href="#" className="text-zinc-800  hover:text-orange-500 ">
+              Contact Us
+            </a>
           </li>
         </ul>
 
