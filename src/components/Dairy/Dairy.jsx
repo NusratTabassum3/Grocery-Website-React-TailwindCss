@@ -1,7 +1,13 @@
 import React from "react";
+import CategoryPage from "../CategoryPage.jsx/CategoryPage";
+import BgDairy from "../../assets/dairy-banner.jpg";
 
 const Dairy = () => {
-  return <div></div>;
+  return (
+    <div>
+      <CategoryPage title="Dairy & Eggs" bgImage={BgDairy} />
+    </div>
+  );
 };
 
 export default Dairy;
