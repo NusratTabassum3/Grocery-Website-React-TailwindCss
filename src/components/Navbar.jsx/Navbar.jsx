@@ -3,6 +3,7 @@ import { GoHeartFill } from "react-icons/go";
 import { HiShoppingBag } from "react-icons/hi";
 import { IoSearch } from "react-icons/io5";
 import { TbMenu2, TbMenu3 } from "react-icons/tb";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
@@ -30,43 +31,43 @@ function Navbar() {
     >
       <nav className="max-w-[1400px] mx-auto px-10 md:h-[14vh] h-[12vh] flex justify-between items-center">
         {/* Logo */}
-        <a href="#" className="text-3xl font-bold">
+        <Link to="/" className="text-3xl font-bold">
           Gr<span className="text-orange-500 uppercase">o</span>cify
-        </a>
+        </Link>
 
         {/* Desktop Menu */}
         <ul className="md:flex items-center gap-x-15 hidden">
           <li>
-            <a
-              href="#"
+            <Link
+              to="/"
               className="font-semibold tracking-wider text-orange-500 hover:text-orange-500"
             >
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#"
+            <Link
+              to="#"
               className="font-semibold tracking-wider text-zinc-800 hover:text-orange-500"
             >
               About Us
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#"
+            <Link
+              to="#"
               className="font-semibold tracking-wider text-zinc-800 hover:text-orange-500"
             >
               Process
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#"
+            <Link
+              to="#"
               className="font-semibold tracking-wider text-zinc-800 hover:text-orange-500"
             >
               Contact Us
-            </a>
+            </Link>
           </li>
         </ul>
 

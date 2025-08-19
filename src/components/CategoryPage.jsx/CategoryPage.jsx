@@ -3,8 +3,11 @@ import ProductList from "../ProductList/ProductList";
 import Banner from "../Banner/Banner";
 import Cards from "../Cards/Cards";
 
-const CategoryPage = ({ title, bgImage }) => {
-  const renderProduct = ProductList.map((product) => {
+const CategoryPage = ({ title, bgImage, categories = [] }) => {
+  let filteredItems = categories.includes("All")
+    ? ProductList
+    : ProductList.filter((itme) => categories.includes(itme.category));
+  const renderProduct = filteredItems.map((product) => {
     return (
       <Cards image={product.image} name={product.name} price={product.price} />
     );
